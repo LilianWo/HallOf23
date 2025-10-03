@@ -179,7 +179,7 @@ header {
 }
 
 #box1 {
-    background-image: url('photo/2198819600_large_image.avif');
+    background-image: url("photo/lebronxdoncic.avif");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@ header {
 }
 
 #box2 {
-    background-image: url('photo/Anthony-Edwards-Timberwolves-vs-Grizzlies-NBA-2048x1365.jpg');
+    background-image: url("photo/antman.jpg");
     background-size: cover;    
     background-position: 50% 30%;  
     background-repeat: no-repeat;
@@ -225,7 +225,7 @@ header {
 }
 
 #box3 {
-    background-image: url(../HallOf23/photo/2062177327.0.jpg);
+    background-image: url("photo/houston.jpg");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -248,7 +248,7 @@ header {
 }
 
 #box4 {
-    background-image: url(../HallOf23/photo/image-4642-scaled.jpg);
+    background-image: url("photo/giannis2.jpg");
     background-size: cover;    
     background-position: 50% 30%;  
     background-repeat: no-repeat;
@@ -271,7 +271,7 @@ header {
 }
 
 #box5 {
-    background-image: url(../HallOf23/photo/l6sgxcgbdtd88uvt0dgl.avif);
+    background-image: url("photo/pauloxwagner.webp");
     background-size: cover;    
     background-position: 50% 20%;  
     background-repeat: no-repeat;
@@ -294,7 +294,7 @@ header {
 }
 
 #box6 {
-    background-image: url(../HallOf23/photo/new-york-knicks.jpg);
+    background-image: url("photo/knicks.jpg");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -366,7 +366,7 @@ header {
 #pred1 {
     background-color: #df5b04;
     border-radius: 20px;
-    background-image: url(../HallOf23/photo/amen.webp);
+    background-image: url("photo/amen.webp");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -376,7 +376,7 @@ header {
 #pred2 {
     background-color: #df5b04;
     border-radius: 20px;
-    background-image: url(../HallOf23/photo/giannis-antetokounmpo.jpg);
+    background-image: url("photo/giannis.jpg");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -386,7 +386,7 @@ header {
 #pred3 {
     background-color: #df5b04;
     border-radius: 20px;
-    background-image: url(../HallOf23/photo/tatum.jpeg);
+    background-image: url("photo/tatum.jpeg");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -396,7 +396,7 @@ header {
 #pred4 {
     background-color: #df5b04;
     border-radius: 20px;
-    background-image: url(../HallOf23/photo/wemby.avif);
+    background-image: url("photo/wemby.avif");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -406,7 +406,7 @@ header {
 #pred5 {
     background-color: #df5b04;
     border-radius: 20px;
-    background-image: url(../HallOf23/photo/nba\ cup.jpg);
+    background-image: url("photo/nbacup.jpg");
     background-size: cover;    
     background-position: 50% 50%;  
     background-repeat: no-repeat;
@@ -461,7 +461,7 @@ header {
     height: 100%;
     justify-self: center;
     align-self: center;
-    background-image: url(../HallOf23/photo/udoka.webp);
+    background-image: url("photo/udoka.webp");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -483,7 +483,7 @@ header {
     height: 100%;
     justify-self: center;
     align-self: center;
-    background-image: url(../HallOf23/photo/kerr.jpg);
+    background-image: url("photo/kerr.jpg");
     background-size: cover;    
     background-position: 42% 0%;  
     background-repeat: no-repeat;
@@ -505,7 +505,7 @@ header {
     height: 100%;
     justify-self: center;
     align-self: center;
-    background-image: url(../HallOf23/photo/mazulla.avif);
+    background-image: url("photo/mazulla.avif");
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -564,5 +564,45 @@ footer {
     color: #df5b04;        
 }
 
+/* Container2 responsive */
+@media (max-width: 1024px) {
+  #container2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: auto; /* laisse le container s’adapter au contenu */
+  }
+
+  .gauche, .droite {
+    width: 90%; /* prend presque tout l’écran */
+    margin: 20px auto; /* centrage horizontal */
+  }
+
+  .gauche p {
+    margin-bottom: 30px;
+    font-size: 1rem; /* texte plus petit pour petits écrans */
+  }
+
+  .droite > div {
+    width: 100%; /* prend toute la largeur disponible */
+    max-width: 400px;
+    min-height: 50px;
+    font-size: 1.2rem; /* ajuste la taille du texte */
+  }
+}
+
+/* Mobile très petit */
+@media (max-width: 480px) {
+  .gauche p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .droite > div {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
 
 
