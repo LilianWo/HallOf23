@@ -592,100 +592,36 @@ footer {
   }
 }
 
-/* Mobile très petit */
+/* Responsive mobile général */
 @media (max-width: 480px) {
-  .gauche p {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-  }
-
-  .droite > div {
-    font-size: 1rem;
-    padding: 8px;
-  }
-}
-
-/* Extra small screens (iPhone 12 Mini, ~375px) */
-@media (max-width: 400px) {
-
-  /* Container2 - texte et prédictions */
-  #container2 {
-    padding: 10px;
-  }
-
-  .gauche, .droite {
-    width: 95%;        /* presque toute la largeur */
-    margin: 10px auto; /* centrage horizontal */
-  }
-
-  .gauche p {
-    font-size: 0.9rem; /* texte plus petit */
-    margin-bottom: 15px;
-  }
-
-  .droite > div {
-    width: 100%;       /* prend toute la largeur dispo */
-    max-width: 300px;  /* limite pour petits écrans */
-    font-size: 1rem;   /* texte plus petit */
-    padding: 6px;      /* réduit padding pour tenir */
-  }
-
-  /* Pour container1 et container3 si besoin */
-  #container1 > div, #container3 > div {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-
-/* 1️⃣ Box-sizing global pour inclure padding et border */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* 2️⃣ Empêcher le débordement horizontal global */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-/* 3️⃣ Containers responsive sur mobile */
-@media (max-width: 768px) {
-
-  /* Container1 et Container2 */
-  #container1,
-  #container2 {
-    width: 100%;       /* prend toute la largeur disponible */
-    padding: 0 10px;   /* espace intérieur */
-    overflow-x: hidden; /* empêche tout débordement horizontal */
-  }
-
-  /* Boxes de container1 et container3 */
-  #container1 > div,
-  #container3 > div {
-    width: 100%;       /* prend toute la largeur */
-    max-width: 350px;  /* limite pour petits écrans */
-    margin: 10px auto; /* centrage horizontal */
-  }
-
-  /* Container2 - texte et prédictions */
-  .gauche, .droite {
-    width: 95%;
-    margin: 10px auto;
-  }
-
-  .gauche p {
-    font-size: 0.9rem; /* texte plus petit */
-  }
-
-  .droite > div {
+  #container1, #container2, #container3 {
     width: 100%;
-    max-width: 300px;
-    font-size: 1rem;
-    padding: 6px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column; /* passer les grids/rows en colonne */
+    align-items: center;
+  }
+
+  #container1 > div,
+  #container3 > div,
+  .droite > div,
+  .gauche {
+    width: 90%;
+    max-width: 320px;
+    margin: 10px 0; /* espace entre les blocs */
+  }
+
+  .gauche p {
+    font-size: 0.85rem; 
+    text-align: center;
+  }
+
+  .droite > div {
+    font-size: 0.95rem;
+    padding: 5px;
   }
 }
+
+
 
 
