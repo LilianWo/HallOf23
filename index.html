@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../HallOf23/index.css">
+</head>
+<body>
+    <header>
+        <div id="logo">Logo</div>
+        <div id="bienvenue">Welcome to the Hall Of 23</div>
+        <div id="logo">Logo</div>
+        <div id="bienvenue">Welcome to the Hall Of 23</div>
+        <div id="connexion">
+        <button id="burger">&#9776;</button>
+        <nav id="menu">
+            <a href="../" class="button-75">Reviews</a>
+            <a href="../" class="button-75">Prédictions</a>
+            <a href="../" class="button-75">Analyses</a>
+            <a href="../" class="button-75">Quiz</a>
+        </nav>
+    </div>
+    </header>
+
+    <div id="container1">
+        <div id="review"><h2>Reviews des équipes pour la saison 2025-2026 !</h2> 
+        <br> <p>Dans cette section, on analyse les forces et faiblesses de chaque
+        équipe, leurs évolutions depuis la saison précédente et les perspectives 
+        pour les prochains mois. L’objectif : donner une vision claire et rapide 
+        de ce à quoi s’attendre pour cette nouvelle saison.</p></div>
+        <div id="west"><h3>Team West</h3></div>
+        <div id="box1">Los Angeles <br> Lakers</div>
+        <div id="box2">Minnesota <br> Timberwolves</div>
+        <div id="box3">Houston <br> Rockets</div>
+        <div id="voirplus"><a href="../" class="button-75">Voir plus</a></div>
+        <div id="east"><h3>Team East</h3></div>
+        <div id="box4">Milwaukee <br> Bucks</div>
+        <div id="box5">Orlando <br> Magic</div>
+        <div id="box6">New York <br> Knicks</div>
+        <div id="voir"><a href="../" class="button-75">Voir plus</a></div>
+    </div>
+
+    <div id="container2">
+        <div class="gauche">
+            <h2>Prédictions</h2>
+            <p>Dans cette section, nous analysons les tendances, performances et 
+                trajectoires des équipes et des joueurs afin de vous proposer des
+                 prédictions éclairées pour la nouvelle saison. Que ce soit pour 
+                 les meilleurs défenseurs, les futurs MVP ou les équipes favorites 
+                 pour décrocher la NBA Cup, vous trouverez ici un aperçu complet et 
+                 argumenté des scénarios possibles. Cette partie vous aide à 
+                 comprendre ce à quoi vous pouvez vous attendre, en combinant 
+                 statistiques, performances passées et analyses stratégiques.</p>
+            <div id="voir"><a href="../" class="button-75">Voir plus</a></div>
+        </div>
+        <div class="droite">
+            <div id="pred1">Amen meilleur défenseur de la ligue ?</div>
+            <div id="pred2">Last dance de Giannis avec les Bucks ?</div>
+            <div id="pred3">Saison blanche pour les Celtics ?</div>
+            <div id="pred4">Wemby sur la même lancée ?</div>
+            <div id="pred5">Qui pour prendre la NBA Cup ?</div>
+        </div>
+    </div>
+
+    <div id="container3">
+        <div id="analyses"><h2>Analyses</h2> <br>
+        <p>Dans cette section, nous décryptons les performances et stratégies des
+             équipes. L’objectif : vous offrir un regard clair et rapide sur les
+              points forts, points faibles et tendances clés de la saison. 
+              Grâce à nos analyses détaillées, vous pourrez mieux comprendre 
+              les enjeux et anticiper l’évolution de chaque équipe.</p></div>
+        <div id="bloc1">Analyse 1</div>
+        <div id="bloc2">Analyse 2</div>
+        <div id="bloc3">Analyse 3</div>
+        <div id="voir"><a href="../" class="button-75">Voir plus</a></div>
+    </div>
+
+    <section id="quiz-intro">
+    <h2>Découvre ton équipe idéale !</h2>
+    <p>Réponds à quelques questions rapides pour savoir quelle équipe correspond le mieux à ton style de jeu pour la saison 2025-2026.</p>
+    <div>
+        <a href="quiz.html" class="button-75" role="button">Faire le quiz</a>
+    </div>
+    </section>
+
+    <footer>
+    <div id="footer-content">
+        <p>&copy; 2025 Hall Of 23. Tous droits réservés.</p>
+        <div id="footer-links">
+            <a href="../">Accueil</a> |
+            <a href="../">Reviews</a> |
+            <a href="../">Prédictions</a> |
+            <a href="../">Analyses</a> |
+            <a href="../">Quiz</a>
+        </div>
+        <p>Contact : wait</p>
+    </div>
+</footer>
+
+    <script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("active"); // ouvre/ferme le menu
+  });
+
+  // Option : ferme le menu si on clique ailleurs
+  document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  });
+</script>
+</body>
+</html>
