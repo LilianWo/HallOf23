@@ -605,41 +605,45 @@ body {
     overflow-x: hidden;
 }
 
-/* Responsive mobile très petit */
+/* Responsive mobile */
 @media (max-width: 480px) {
+    /* Containers */
+    #container1, #container2, #container3 {
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  /* Tous les containers */
-  #container1, #container2, #container3 {
-    width: 100%;
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    /* Boxes */
+    #container1 > div,
+    #container3 > div,
+    .droite > div,
+    .gauche {
+        width: 100%;
+        max-width: 320px;
+        margin: 10px 0;
+    }
 
-  /* Boxes */
-  #container1 > div,
-  #container3 > div,
-  .droite > div,
-  .gauche {
-    width: 100%;
-    max-width: 320px;
-    margin: 10px 0;
-  }
+    /* Texte gauche */
+    .gauche p {
+        font-size: 0.85rem;
+        text-align: center;
+    }
 
-  /* Texte gauche */
-  .gauche p {
-    font-size: 0.85rem;
-    text-align: center;
-  }
-
-  /* Boxes droites */
-  .droite > div {
-    font-size: 0.95rem;
-    padding: 5px;
-  }
+    /* Boxes droites */
+    .droite > div {
+        font-size: 0.95rem;
+        padding: 5px;
+    }
 }
 
-
-
-
+@media (max-width: 480px) {
+    #container1, #container2, #container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+}
