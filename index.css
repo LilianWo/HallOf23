@@ -647,3 +647,11 @@ body {
         padding: 0 10px;
     }
 }
+
+@media (max-width: 480px) {
+  #container1 {
+    height: auto;        /* hauteur s’adapte au contenu */
+    min-height: 100vh;   /* facultatif : garder au moins la hauteur écran */
+    padding-bottom: 20px; /* espace supplémentaire si besoin */
+  }
+}
