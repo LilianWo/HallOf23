@@ -592,30 +592,48 @@ footer {
   }
 }
 
-/* Responsive mobile général */
+/* Box-sizing global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Responsive mobile très petit */
 @media (max-width: 480px) {
+
+  /* Tous les containers */
   #container1, #container2, #container3 {
     width: 100%;
     padding: 0 10px;
     display: flex;
-    flex-direction: column; /* passer les grids/rows en colonne */
+    flex-direction: column;
     align-items: center;
   }
 
+  /* Boxes */
   #container1 > div,
   #container3 > div,
   .droite > div,
   .gauche {
-    width: 90%;
+    width: 100%;
     max-width: 320px;
-    margin: 10px 0; /* espace entre les blocs */
+    margin: 10px 0;
   }
 
+  /* Texte gauche */
   .gauche p {
-    font-size: 0.85rem; 
+    font-size: 0.85rem;
     text-align: center;
   }
 
+  /* Boxes droites */
   .droite > div {
     font-size: 0.95rem;
     padding: 5px;
