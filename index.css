@@ -179,7 +179,7 @@ header {
 }
 
 #box1 {
-    background-image: url(../HallOf23/photo/2198819600_large_image.avif);
+    background-image: url('photo/2198819600_large_image.avif');
     background-size: cover;    
     background-position: 50% 0%;  
     background-repeat: no-repeat;
@@ -563,4 +563,5 @@ footer {
 #footer-links a:hover {
     color: #df5b04;        
 }
+
 
