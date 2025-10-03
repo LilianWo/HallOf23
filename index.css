@@ -202,7 +202,7 @@ header {
 }
 
 #box2 {
-    background-image: url(../HallOf23/photo/Anthony-Edwards-Timberwolves-vs-Grizzlies-NBA-2048x1365.jpg);
+    background-image: url('photo/Anthony-Edwards-Timberwolves-vs-Grizzlies-NBA-2048x1365.jpg');
     background-size: cover;    
     background-position: 50% 30%;  
     background-repeat: no-repeat;
@@ -563,5 +563,6 @@ footer {
 #footer-links a:hover {
     color: #df5b04;        
 }
+
 
 
