@@ -6,6 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="analyses.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33ZB3SCDPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33ZB3SCDPY');
+</script>
 </head>
 <body>
     <header>
@@ -16,10 +25,40 @@
         <div id="connexion">
         <button id="burger">&#9776;</button>
         <nav id="menu">
-            <a href="reviews.html" class="button-75">Reviews</a>
+            <a href="previews.html" class="button-75">Previews</a>
             <a href="predictions.html" class="button-75">Prédictions</a>
             <a href="analyses.html" class="button-75">Analyses</a>
             <a href="quiz.html" class="button-75">Quiz</a>
         </nav>
     </div>
     </header>
+
+        <footer>
+    <div id="footer-content">
+        <p>&copy; 2025 Hall Of 23. Tous droits réservés.</p>
+        <div id="footer-links">
+            <a href="index.html">Accueil</a> |
+            <a href="previews.html">Previews</a> |
+            <a href="predictions.html">Prédictions</a> |
+            <a href="analyses.html">Analyses</a> |
+            <a href="quiz.html">Quiz</a>
+        </div>
+        <p>Contact : wait</p>
+    </div>
+</footer>
+
+      <script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("active"); // ouvre/ferme le menu
+  });
+
+  // Option : ferme le menu si on clique ailleurs
+  document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  });
+</script>
