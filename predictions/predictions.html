@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="predictions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33ZB3SCDPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33ZB3SCDPY');
+</script>
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="../index.html">Logo</a></div>
+        <div id="bienvenue"><a href="../index.html">Welcome to the Hall Of 23</a></div>
+        <div id="connexion">
+        <button id="burger">&#9776;</button>
+        <nav id="menu">
+            <a href="../peviews/previews.html" class="button-75">Previews</a>
+            <a href="../predictions/predictions.html" class="button-75">Prédictions</a>
+            <a href="../analyses/analyses.html" class="button-75">Analyses</a>
+            <a href="../quiz/quiz.html" class="button-75">Quiz</a>
+        </nav>
+    </div>
+    </header>
+
+    <h1>Nos Prédictions pour cette saison NBA 2025-2026</h1>
+
+    <div id="bloc1">
+        <div class="gauche">
+            <img src="../photo/amen.webp" alt="">
+        </div>
+        <div class="droite">
+            <h2>Amen meilleur défenseur de la ligue ?</h2>
+            <p>Amen Thomson a rapidement attiré l’attention grâce à sa défense 
+                solide et sa capacité à scorer dans les moments décisifs. 
+                Ses statistiques sont impressionnantes : points par match, rebonds 
+                et interceptions montrent déjà son impact sur le terrain. Il est 
+                déjà considéré comme un joueur incontournable pour son équipe et 
+                pourrait continuer à briller lors des prochains matchs...</p>
+            <div id="voir"><a href="predictions/predictions.html" class="button-75">Lire plus</a></div>
+        </div>
+    </div>
+
+        <div id="bloc2">
+        <div class="gauche">
+            <h2>Last dance de Giannis avec les Bucks ?</h2>
+            <p>Giannis semble déterminé à marquer cette saison de son empreinte,
+                  enchaînant les performances spectaculaires et affinant chaque
+                  aspect de son jeu. Son rôle de leader sera crucial pour les 
+                  Bucks, et ses drives, passes et choix stratégiques pourraient 
+                  faire la différence lors des moments clés. Les fans attendent 
+                  de voir si cette saison pourrait être vraiment sa dernière danse avec...</p>
+            <div id="voir"><a href="predictions/predictions.html" class="button-75">Lire plus</a></div>
+        </div>
+        <div class="droite">
+            <img src="../photo/giannis2.jpg" alt="">
+        </div>
+    </div>
+
+       <div id="bloc1">
+        <div class="gauche">
+            <img src="../photo/tatum.jpeg" alt="">
+        </div>
+        <div class="droite">
+            <h2>Saison blanche pour les Celtics ?</h2>
+            <p>Les Celtics disposent d’une équipe talentueuse et pleine de potentiel,
+                 mais il faudra que chacun trouve sa place et que la cohésion se crée 
+                 rapidement. Certains jeunes joueurs montrent déjà des signes 
+                 prometteurs et pourraient s’imposer comme des éléments décisifs.
+                 Si tout se met en place, ils pourraient créer des...</p>
+            <div id="voir"><a href="predictions/predictions.html" class="button-75">Lire plus</a></div>
+        </div>
+    </div>
+
+            <div id="bloc2">
+        <div class="gauche">
+            <h2>Wemby sur la même lancée ?</h2>
+            <p>Wemby semble prêt à poursuivre sa progression fulgurante. Sa polyvalence,
+                son énergie et sa capacité à influencer le jeu sur tous les secteurs
+                font de lui un joueur à suivre de près. S’il maintient ce niveau et
+                continue de progresser, il pourrait devenir l’un des grands noms
+                de...</p>
+            <div id="voir"><a href="predictions/predictions.html" class="button-75">Lire plus</a></div>
+        </div>
+        <div class="droite">
+            <img src="../photo/wemby.avif" alt="">
+        </div>
+    </div>
+
+           <div id="bloc1">
+        <div class="gauche">
+            <img src="../photo/nbacup.jpg" alt="">
+        </div>
+        <div class="droite">
+            <h2>Qui pour prendre la NBA Cup ?</h2>
+            <p>La course à la NBA Cup s’annonce passionnante cette année, avec plusieurs
+                équipes capables de créer la surprise. Les leaders habituels sont présents,
+                mais de nouveaux talents pourraient redistribuer les cartes et changer
+                l’issue de la compétition. Chaque match pourrait être décisif, et il
+                reste à savoir...</p>
+            <div id="voir"><a href="predictions/predictions.html" class="button-75">Lire plus</a></div>
+        </div>
+    </div>
+
+                <footer>
+    <div id="footer-content">
+        <p>&copy; 2025 Hall Of 23. Tous droits réservés.</p>
+        <div id="footer-links">
+            <a href="../index.html">Accueil</a> |
+            <a href="../peviews/previews.html">Previews</a> |
+            <a href="../predictions/predictions.html">Prédictions</a> |
+            <a href="../analyses/analyses.html">Analyses</a> |
+            <a href="../quiz/quiz.html">Quiz</a>
+        </div>
+        <p>Contact : wait</p>
+    </div>
+</footer>
+
+          <script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("active"); // ouvre/ferme le menu
+  });
+
+  // Option : ferme le menu si on clique ailleurs
+  document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  });
+</script>
