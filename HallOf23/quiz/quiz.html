@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33ZB3SCDPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33ZB3SCDPY');
+</script>
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="../index.html">Logo</a></div>
+        <div id="bienvenue"><a href="../index.html">Welcome to the Hall Of 23</a></div>
+        <div id="connexion">
+        <button id="burger">&#9776;</button>
+        <nav id="menu">
+            <a href="../peviews/previews.html" class="button-75">Previews</a>
+            <a href="../predictions/predictions.html" class="button-75">Prédictions</a>
+            <a href="../analyses/analyses.html" class="button-75">Analyses</a>
+            <a href="../quiz/quiz.html" class="button-75">Quiz</a>
+        </nav>
+    </div>
+    </header>
+
+        <main>
+        <form id="quiz-form">
+
+            <!-- Questions générées d'après answerMapping -->
+            <div class="question">
+                <p>1. Quel style de jeu préfères-tu ?</p>
+                <label><input type="radio" name="q1" value="a" required> Attaque rapide</label>
+                <label><input type="radio" name="q1" value="b"> Défense solide</label>
+                <label><input type="radio" name="q1" value="c"> Jeu équilibré</label>
+            </div>
+
+            <div class="question">
+                <p>2. Tu préfères les stars ou l’esprit d’équipe ?</p>
+                <label><input type="radio" name="q2" value="a" required> Stars</label>
+                <label><input type="radio" name="q2" value="b"> Esprit d’équipe</label>
+                <label><input type="radio" name="q2" value="c"> Un peu des deux</label>
+            </div>
+
+            <div class="question">
+                <p>3. Préfères-tu un jeu rapide ou plus posé ?</p>
+                <label><input type="radio" name="q3" value="a" required> Rapide</label>
+                <label><input type="radio" name="q3" value="b"> Posé</label>
+                <label><input type="radio" name="q3" value="c"> Équilibré</label>
+            </div>
+
+            <div class="question">
+                <p>4. Tu privilégies la jeunesse ou l’expérience ?</p>
+                <label><input type="radio" name="q4" value="a" required> Jeunesse</label>
+                <label><input type="radio" name="q4" value="b"> Expérience</label>
+                <label><input type="radio" name="q4" value="c"> Mélange</label>
+            </div>
+
+            <div class="question">
+                <p>5. Tu préfères une équipe offensive ou défensive ?</p>
+                <label><input type="radio" name="q5" value="a" required> Offensive</label>
+                <label><input type="radio" name="q5" value="b"> Défensive</label>
+                <label><input type="radio" name="q5" value="c"> Équilibrée</label>
+            </div>
+
+            <div class="question">
+                <p>6. L’importance du tir à trois points ?</p>
+                <label><input type="radio" name="q6" value="a" required> Très important</label>
+                <label><input type="radio" name="q6" value="b"> Moyennement</label>
+                <label><input type="radio" name="q6" value="c"> Peu important</label>
+            </div>
+
+            <div class="question">
+                <p>7. Préfères-tu des joueurs spectaculaires ?</p>
+                <label><input type="radio" name="q7" value="a" required> Oui</label>
+                <label><input type="radio" name="q7" value="b"> Moyennement</label>
+                <label><input type="radio" name="q7" value="c"> Non</label>
+            </div>
+
+            <div class="question">
+                <p>8. Importance de la défense ?</p>
+                <label><input type="radio" name="q8" value="a" required> Très importante</label>
+                <label><input type="radio" name="q8" value="b"> Moyennement</label>
+                <label><input type="radio" name="q8" value="c"> Peu importante</label>
+            </div>
+
+            <div class="question">
+                <p>9. Préfères-tu des équipes rapides ou stables ?</p>
+                <label><input type="radio" name="q9" value="a" required> Rapides</label>
+                <label><input type="radio" name="q9" value="b"> Stables</label>
+                <label><input type="radio" name="q9" value="c"> Mixte</label>
+            </div>
+
+            <div class="question">
+                <p>10. Ton type de star préféré ?</p>
+                <label><input type="radio" name="q10" value="a" required> Leader</label>
+                <label><input type="radio" name="q10" value="b"> Polyvalent</label>
+                <label><input type="radio" name="q10" value="c"> Solidaire</label>
+            </div>
+
+            <div class="question">
+                <p>11. Préfères-tu un gros collectif ou un duo de stars ?</p>
+                <label><input type="radio" name="q11" value="a" required> Duo de stars</label>
+                <label><input type="radio" name="q11" value="b"> Collectif</label>
+                <label><input type="radio" name="q11" value="c"> Mixte</label>
+            </div>
+
+            <div class="question">
+                <p>12. Priorité aux performances individuelles ou à l’équipe ?</p>
+                <label><input type="radio" name="q12" value="a" required> Individuelles</label>
+                <label><input type="radio" name="q12" value="b"> Équipe</label>
+                <label><input type="radio" name="q12" value="c"> Équilibré</label>
+            </div>
+
+            <div class="question">
+                <p>13. Préfères-tu un jeu stratégique ou instinctif ?</p>
+                <label><input type="radio" name="q13" value="a" required> Stratégique</label>
+                <label><input type="radio" name="q13" value="b"> Instinctif</label>
+                <label><input type="radio" name="q13" value="c"> Mixte</label>
+            </div>
+
+            <div class="question">
+                <p>14. Tu favorises le spectacle ou l’efficacité ?</p>
+                <label><input type="radio" name="q14" value="a" required> Spectacle</label>
+                <label><input type="radio" name="q14" value="b"> Efficacité</label>
+                <label><input type="radio" name="q14" value="c"> Les deux</label>
+            </div>
+
+            <div class="question">
+                <p>15. Importance de la défense individuelle ?</p>
+                <label><input type="radio" name="q15" value="a" required> Très importante</label>
+                <label><input type="radio" name="q15" value="b"> Moyenne</label>
+                <label><input type="radio" name="q15" value="c"> Faible</label>
+            </div>
+
+            <div class="question">
+                <p>16. Ton choix préféré : dunk, shoot ou passe ?</p>
+                <label><input type="radio" name="q16" value="a" required> Dunk</label>
+                <label><input type="radio" name="q16" value="b"> Shoot</label>
+                <label><input type="radio" name="q16" value="c"> Passe</label>
+            </div>
+
+            <div class="question">
+                <p>17. Préfères-tu une équipe constante ou surprenante ?</p>
+                <label><input type="radio" name="q17" value="a" required> Constante</label>
+                <label><input type="radio" name="q17" value="b"> Surprenante</label>
+                <label><input type="radio" name="q17" value="c"> Mixte</label>
+            </div>
+
+            <div class="question">
+                <p>18. Tu préfères un style offensif ou défensif ?</p>
+                <label><input type="radio" name="q18" value="a" required> Offensif</label>
+                <label><input type="radio" name="q18" value="b"> Défensif</label>
+                <label><input type="radio" name="q18" value="c"> Mixte</label>
+            </div>
+
+            <div class="question">
+                <p>19. Préfères-tu une équipe expérimentée ou jeune ?</p>
+                <label><input type="radio" name="q19" value="a" required> Expérimentée</label>
+                <label><input type="radio" name="q19" value="b"> Jeune</label>
+                <label><input type="radio" name="q19" value="c"> Mixte</label>
+            </div>
+
+            <div class="question">
+                <p>20. L’importance de la cohésion d’équipe ?</p>
+                <label><input type="radio" name="q20" value="a" required> Très importante</label>
+                <label><input type="radio" name="q20" value="b"> Moyenne</label>
+                <label><input type="radio" name="q20" value="c"> Peu importante</label>
+            </div>
+
+            <button type="submit" class="button-75">Voir le résultat</button>
+        </form>
+
+        <div id="quiz-result" style="display:none;">
+            <h2>Résultat :</h2>
+            <p id="result-text"></p>
+        </div>
+        </main>
+
+                <footer>
+    <div id="footer-content">
+        <p>&copy; 2025 Hall Of 23. Tous droits réservés.</p>
+        <div id="footer-links">
+            <a href="../index.html">Accueil</a> |
+            <a href="../peviews/previews.html">Previews</a> |
+            <a href="../predictions/predictions.html">Prédictions</a> |
+            <a href="../analyses/analyses.html">Analyses</a> |
+            <a href="../quiz/quiz.html">Quiz</a>
+        </div>
+        <p>Contact : wait</p>
+    </div>
+</footer>
+
+        <script>
+const form = document.getElementById('quiz-form');
+const resultDiv = document.getElementById('quiz-result');
+const resultText = document.getElementById('result-text');
+
+const nbaTeams = [
+  "Atlanta Hawks","Boston Celtics","Brooklyn Nets","Charlotte Hornets","Chicago Bulls",
+  "Cleveland Cavaliers","Dallas Mavericks","Denver Nuggets","Detroit Pistons","Golden State Warriors",
+  "Houston Rockets","Indiana Pacers","Los Angeles Clippers","Los Angeles Lakers","Memphis Grizzlies",
+  "Miami Heat","Milwaukee Bucks","Minnesota Timberwolves","New Orleans Pelicans","New York Knicks",
+  "Oklahoma City Thunder","Orlando Magic","Philadelphia 76ers","Phoenix Suns","Portland Trail Blazers",
+  "Sacramento Kings","San Antonio Spurs","Toronto Raptors","Utah Jazz","Washington Wizards"
+];
+
+// Mapping des réponses aux équipes
+const answerMapping = {
+  q1: { a: ["Los Angeles Lakers","Miami Heat"], b: ["Milwaukee Bucks","Boston Celtics"], c: ["Golden State Warriors","Toronto Raptors"] },
+  q2: { a: ["Brooklyn Nets","Philadelphia 76ers"], b: ["Chicago Bulls","Cleveland Cavaliers"], c: ["Phoenix Suns","Denver Nuggets"] },
+  q3: { a: ["New York Knicks","Indiana Pacers"], b: ["Dallas Mavericks","Houston Rockets"], c: ["Charlotte Hornets","Orlando Magic"] },
+  q4: { a: ["Sacramento Kings","Memphis Grizzlies"], b: ["San Antonio Spurs","Utah Jazz"], c: ["Portland Trail Blazers","Los Angeles Clippers"] },
+  q5: { a: ["Atlanta Hawks","Detroit Pistons"], b: ["New Orleans Pelicans","Milwaukee Bucks"], c: ["Miami Heat","Boston Celtics"] },
+  q6: { a: ["Golden State Warriors","Toronto Raptors"], b: ["Brooklyn Nets","Philadelphia 76ers"], c: ["Chicago Bulls","Cleveland Cavaliers"] },
+  q7: { a: ["Phoenix Suns","Denver Nuggets"], b: ["New York Knicks","Indiana Pacers"], c: ["Dallas Mavericks","Houston Rockets"] },
+  q8: { a: ["Charlotte Hornets","Orlando Magic"], b: ["Sacramento Kings","Memphis Grizzlies"], c: ["San Antonio Spurs","Utah Jazz"] },
+  q9: { a: ["Portland Trail Blazers","Los Angeles Clippers"], b: ["Atlanta Hawks","Detroit Pistons"], c: ["New Orleans Pelicans","Milwaukee Bucks"] },
+  q10:{ a: ["Miami Heat","Boston Celtics"], b: ["Golden State Warriors","Toronto Raptors"], c: ["Brooklyn Nets","Philadelphia 76ers"] },
+  q11:{ a: ["Chicago Bulls","Cleveland Cavaliers"], b: ["Phoenix Suns","Denver Nuggets"], c: ["New York Knicks","Indiana Pacers"] },
+  q12:{ a: ["Dallas Mavericks","Houston Rockets"], b: ["Charlotte Hornets","Orlando Magic"], c: ["Sacramento Kings","Memphis Grizzlies"] },
+  q13:{ a: ["San Antonio Spurs","Utah Jazz"], b: ["Portland Trail Blazers","Los Angeles Clippers"], c: ["Atlanta Hawks","Detroit Pistons"] },
+  q14:{ a: ["New Orleans Pelicans","Milwaukee Bucks"], b: ["Miami Heat","Boston Celtics"], c: ["Golden State Warriors","Toronto Raptors"] },
+  q15:{ a: ["Brooklyn Nets","Philadelphia 76ers"], b: ["Chicago Bulls","Cleveland Cavaliers"], c: ["Phoenix Suns","Denver Nuggets"] },
+  q16:{ a: ["New York Knicks","Indiana Pacers"], b: ["Dallas Mavericks","Houston Rockets"], c: ["Charlotte Hornets","Orlando Magic"] },
+  q17:{ a: ["Sacramento Kings","Memphis Grizzlies"], b: ["San Antonio Spurs","Utah Jazz"], c: ["Portland Trail Blazers","Los Angeles Clippers"] },
+  q18:{ a: ["Atlanta Hawks","Detroit Pistons"], b: ["New Orleans Pelicans","Milwaukee Bucks"], c: ["Miami Heat","Boston Celtics"] },
+  q19:{ a: ["Golden State Warriors","Toronto Raptors"], b: ["Brooklyn Nets","Philadelphia 76ers"], c: ["Chicago Bulls","Cleveland Cavaliers"] },
+  q20:{ a: ["Phoenix Suns","Denver Nuggets"], b: ["New York Knicks","Indiana Pacers"], c: ["Dallas Mavericks","Houston Rockets"] },
+};
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    
+    const teamScores = {};
+    nbaTeams.forEach(team => teamScores[team] = 0);
+    
+    const formData = new FormData(form);
+    for(let [question, choice] of formData.entries()){
+        const teams = answerMapping[question][choice];
+        teams.forEach(team => teamScores[team]++);
+    }
+    
+    // Trouve la ou les équipes avec le plus de points
+    let maxScore = 0;
+    let topTeams = [];
+    for(let team in teamScores){
+        if(teamScores[team] > maxScore){
+            maxScore = teamScores[team];
+            topTeams = [team];
+        } else if(teamScores[team] === maxScore){
+            topTeams.push(team);
+        }
+    }
+    
+    resultText.textContent = "Ton équipe idéale : " + topTeams.join(", ");
+    resultDiv.style.display = "block";
+});
+</script>
+
+      <script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("active"); // ouvre/ferme le menu
+  });
+
+  // Option : ferme le menu si on clique ailleurs
+  document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  });
+</script>
+
+</body>
+</html>
