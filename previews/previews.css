@@ -1,0 +1,383 @@
+body {
+    font-family: 'Poppins';
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "logo bienvenue connexion";
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#burger {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+  transform-origin: center; 
+}
+
+#burger:hover {
+  color: #df5b04;
+  transform: translateY(-50%) scale(1.1); 
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: black;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  flex-direction: column;
+  gap: 10px;
+}
+
+#menu.active {
+  display: flex;
+}
+
+
+.button-75 {
+  background-color: #ffffff;
+  border: 2px solid #df5b04;
+  border-radius: 30px;
+  box-shadow: #df5b04 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-75:hover {
+  background-color: #fff;
+}
+
+.button-75:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-75 {
+    min-width: 150px;
+    padding: 0 15px;
+  }
+}
+
+#logo, #bienvenue, #connexion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#logo a {
+  text-decoration: none;  /* pas de soulignement */
+  color: white;           /* toujours blanc */
+  font-size: larger;      /* taille fixe */
+}
+
+#logo a:visited,
+#logo a:hover,
+#logo a:active,
+#logo a:focus {
+  color: white;           /* reste blanc */
+  text-decoration: none;  /* jamais souligné */
+  font-size: larger;      /* taille inchangée */
+  outline: none;          /* supprime contour bleu */
+}
+
+#bienvenue {
+    grid-area: bienvenue;
+}
+
+#bienvenue a {
+    text-decoration: none;  /* pas de soulignement */
+    color: white;           /* toujours blanc */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* taille responsive */
+    cursor: pointer;        /* curseur main */
+}
+
+/* Supprime tout autre effet hover ou focus */
+#bienvenue a:hover,
+#bienvenue a:focus,
+#bienvenue a:active,
+#bienvenue a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: inherit;     /* reprend la taille responsive définie */
+    outline: none;
+}
+
+#connexion {
+    display: flex;
+    flex-direction: row;
+    grid-area: connexion;
+    gap: 10px;
+}
+
+footer {
+    background-color: black;  
+    color: white;             
+    text-align: center;    
+    padding: 30px 20px;
+    margin-top: 0;
+}
+
+#footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;              
+    align-items: center;
+}
+
+#footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+#footer-links a:hover {
+    color: #df5b04;        
+}
+
+.bloc {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px; /* espace entre les deux moitiés */
+  margin-bottom: 40px; /* espace entre chaque bloc de la page */
+}
+
+/* Moitiés */
+.gauche, .droite {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 30px;
+  border-radius: 20px; /* coins arrondis */
+  overflow: hidden;     /* utile si l’image dépasse */
+}
+
+/* Fond noir sur le bloc de droite */
+.droite {
+  background-color: black;
+  color: white;
+}
+
+/* Image */
+.gauche img, .droite img {
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Titres et texte */
+.gauche h2, .droite h2 {
+  margin: 10px 0 5px;
+  font-size: 1.8rem;
+}
+
+.gauche p, .droite p {
+  max-width: 500px;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Bouton réduit */
+.button-75 {
+  background-color: #ffffff;
+  border: 2px solid #df5b04;
+  border-radius: 25px;
+  box-shadow: #df5b04 3px 3px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button-75:hover {
+  transform: scale(1.05);
+  box-shadow: #df5b04 5px 5px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bloc {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gauche, .droite {
+    width: 90%;
+  }
+
+  .gauche img, .droite img {
+    height: 250px;
+  }
+}
+
+
+h1 {
+    text-align: center; 
+    margin: 0; 
+    margin-top: 20px; 
+    margin-bottom: 20px;   
+}
+
+.side-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pour les deux blocs : important pour bien placer les textes */
+.gauche, .droite {
+  position: relative;
+  overflow: hidden;
+}
+
+/* WEST — collé au bord gauche du bloc gauche */
+.side-text.left {
+  left: -40px; /* tu peux ajuster : -50 pour plus collé, -30 pour plus espacé */
+  color: black; /* fond clair */
+}
+
+.side-text.right {
+  left: -40px; /* tu peux ajuster : -50 pour plus collé, -30 pour plus espacé */
+  color: white; /* fond clair */
+}
+
+@media (max-width: 768px) {
+  .side-text.left,
+  .side-text.right {
+    left: -10px; /* un peu plus proche du bord sur mobile */
+    font-size: 2rem;
+  }
+
+}
+
+.gauche.noir {
+  background-color: black;
+  color: white;
+}
+
+.droite.blanc {
+  background-color: white;
+  color: black;
+}
+
+/* Container de la barre de recherche */
+#search-container {
+    position: sticky;
+    top: 100px; /* 20px en dessous du header si header = 80px */
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent par défaut */
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease; /* transition douce */
+    z-index: 1000;
+}
+
+#search-container:hover {
+    background-color: rgba(255, 255, 255, 1); /* net au hover */
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #df5b04;
+    border-radius: 25px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(223,91,4,0.5);
+}
+/* Responsive : barre plus petite sur mobile */
+@media (max-width: 768px) {
+    #search-bar {
+        width: 95%;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+#search-container.scrolling {
+    backdrop-filter: blur(5px);
+}
+
+/* Décale tous les blocs pour tenir compte du header sticky */
+#gauche, #droite,
+#lakers, #bucks,
+#timberwolves, #orlando,
+#houston, #ny-knicks,
+#phoenix, #washington,
+#warriors, #boston,
+#denver, #miami {
+    scroll-margin-top: 100px; /* ajuste selon la hauteur exacte de ton header */
+}
+
