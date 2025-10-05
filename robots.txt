@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lilianwo.github.io/HallOf23/sitemap.xml
