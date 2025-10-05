@@ -273,3 +273,9 @@ footer {
 #footer-links a:hover {
   color: #df5b04;
 }
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
