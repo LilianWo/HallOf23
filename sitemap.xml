@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page d'accueil -->
   <url>
-    <loc>https://lilianwo.github.io/HallOf23/</loc>
+    <loc>https://lilianwo.github.io/HallOf23/index.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://lilianwo.github.io/HallOf23/predictions/predictions.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lilianwo.github.io/HallOf23/predictions.html</loc>
+    <loc>https://lilianwo.github.io/HallOf23/reviews/reviews.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lilianwo.github.io/HallOf23/reviews.html</loc>
+    <loc>https://lilianwo.github.io/HallOf23/analyses/analyses.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lilianwo.github.io/HallOf23/analyses.html</loc>
+    <loc>https://lilianwo.github.io/HallOf23/quiz/quiz.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lilianwo.github.io/HallOf23/quiz.html</loc>
+    <loc>https://lilianwo.github.io/HallOf23/previews/previews.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
