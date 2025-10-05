@@ -369,3 +369,15 @@ h1 {
 #search-container.scrolling {
     backdrop-filter: blur(5px);
 }
+
+/* Décale tous les blocs pour tenir compte du header sticky */
+#gauche, #droite,
+#lakers, #bucks,
+#timberwolves, #orlando,
+#houston, #ny-knicks,
+#phoenix, #washington,
+#warriors, #boston,
+#denver, #miami {
+    scroll-margin-top: 100px; /* ajuste selon la hauteur exacte de ton header */
+}
+

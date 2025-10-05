@@ -154,18 +154,25 @@
 </footer>
 
 <script>
-// Menu burger
+// ===================== MENU BURGER =====================
 const burger = document.getElementById("burger");
 const menu = document.getElementById("menu");
-burger.addEventListener("click", () => menu.classList.toggle("active"));
-document.addEventListener("click", (e) => {
-  if(!burger.contains(e.target) && !menu.contains(e.target)) menu.classList.remove("active");
+
+burger.addEventListener("click", () => {
+    menu.classList.toggle("active");
 });
 
-// Sticky de la barre
+// Ferme le menu si clic en dehors
+document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove("active");
+    }
+});
+
+// ===================== BARRE DE RECHERCHE STICKY =====================
 const searchContainer = document.getElementById('search-container');
 const header = document.querySelector('header');
-const stickyOffset = header.offsetHeight + 20; // header + 20px espace
+const stickyOffset = header.offsetHeight + 20; // 20px d’espace sous le header
 
 window.addEventListener('scroll', () => {
     if (window.scrollY >= stickyOffset) {
@@ -173,45 +180,40 @@ window.addEventListener('scroll', () => {
     } else {
         searchContainer.classList.remove('sticky');
     }
+
+    // Animation lors du scroll
+    searchContainer.classList.add('scrolling');
+    clearTimeout(window.isScrolling);
+    window.isScrolling = setTimeout(() => {
+        searchContainer.classList.remove('scrolling');
+    }, 150);
 });
 
-// Recherche et scroll vers le bloc entier
+// ===================== RECHERCHE ET SCROLL VERS BLOCS =====================
 const searchBar = document.getElementById('search-bar');
+
 searchBar.addEventListener('input', function() {
     const query = this.value.toLowerCase().trim();
     if (!query) return;
 
-    // Tous les blocs
     const allBlocks = document.querySelectorAll('.bloc');
 
     allBlocks.forEach(block => {
-        // On regarde si le h2 de gauche ou droite correspond à la recherche
         const leftName = block.querySelector('.gauche h2').innerText.toLowerCase();
         const rightName = block.querySelector('.droite h2').innerText.toLowerCase();
 
         if (leftName.includes(query) || rightName.includes(query)) {
-            block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Calcul du scroll avec décalage du header
+            const headerHeight = header.offsetHeight;
+            const yOffset = -headerHeight - 10; // ajustable
+            const y = block.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({ top: y, behavior: 'smooth' });
         }
-        const searchContainer = document.getElementById("search-container");
-
-let isScrolling;
-
-window.addEventListener('scroll', function() {
-    // Ajoute la classe pendant le scroll
-    searchContainer.classList.add('scrolling');
-
-    // Supprime la classe si plus de scroll après 150ms
-    window.clearTimeout(isScrolling);
-    isScrolling = setTimeout(() => {
-        searchContainer.classList.remove('scrolling');
-    }, 150);
-});
     });
 });
-
-
-
 </script>
+
 
 </body>
 </html>
