@@ -1,92 +1,34 @@
-body {
-    font-family: 'Poppins';
-    background-color: white;
+/* ===== Reset & Font ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Header ===== */
 header {
     display: grid;
     width: 100%;
     height: 80px;
-    margin: auto;
     background-color: black;
     color: white;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "logo bienvenue connexion";
+    grid-template-areas: "logo bienvenue connexion";
     position: sticky;
     top: 0;
-}
-
-#burger {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s, color 0.2s;
-  transform-origin: center; 
-}
-
-#burger:hover {
-  color: #df5b04;
-  transform: translateY(-50%) scale(1.1); 
-}
-
-#menu {
-  display: none;
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  background: black;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  flex-direction: column;
-  gap: 10px;
-}
-
-#menu.active {
-  display: flex;
-}
-
-
-.button-75 {
-  background-color: #ffffff;
-  border: 2px solid #df5b04;
-  border-radius: 30px;
-  box-shadow: #df5b04 4px 4px 0 0;
-  color: black;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 0 10px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-75:hover {
-  background-color: #fff;
-}
-
-.button-75:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .button-75 {
-    min-width: 150px;
-    padding: 0 15px;
-  }
+    z-index: 1000;
 }
 
 #logo, #bienvenue, #connexion {
@@ -95,74 +37,124 @@ header {
     align-items: center;
 }
 
-#logo {
-    grid-area: logo;
-}
+#logo { grid-area: logo; }
+#bienvenue { grid-area: bienvenue; }
+#connexion { grid-area: connexion; gap: 10px; position: relative; }
 
-#logo a {
-  text-decoration: none;  /* pas de soulignement */
-  color: white;           /* toujours blanc */
-  font-size: larger;      /* taille fixe */
-}
-
-#logo a:visited,
-#logo a:hover,
-#logo a:active,
-#logo a:focus {
-  color: white;           /* reste blanc */
-  text-decoration: none;  /* jamais souligné */
-  font-size: larger;      /* taille inchangée */
-  outline: none;          /* supprime contour bleu */
-}
-
-#bienvenue {
-    grid-area: bienvenue;
-    font-size: larger;
+#logo a, #bienvenue a {
+    color: white;
+    text-decoration: none;
 }
 
 #bienvenue a {
-  text-decoration: none;  /* pas de soulignement */
-  color: white;           /* toujours blanc */
-  font-size: larger;      /* même taille tout le temps */
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    cursor: pointer;
 }
 
-#bienvenue a:visited,
-#bienvenue a:hover,
-#bienvenue a:active,
-#bienvenue a:focus {
-  color: white;           /* reste blanc dans tous les états */
-  text-decoration: none;  /* jamais souligné */
-  font-size: larger;      /* même taille partout */
-  outline: none;          /* supprime contour du focus */
+#burger {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
 }
 
-#connexion {
-    display: flex;
-    flex-direction: row;
-    grid-area: connexion;
+#burger:hover {
+    color: #df5b04;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    flex-direction: column;
     gap: 10px;
 }
 
-#bloc1 {
+#menu.active { display: flex; }
+
+.button-75 {
+    background-color: #ffffff;
+    border: 2px solid #df5b04;
+    border-radius: 30px;
+    box-shadow: #df5b04 4px 4px 0 0;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 10px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.button-75:hover {
+    transform: scale(1.05);
+    background-color: #ff7f32;
+}
+
+.button-75:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+/* ===== Title ===== */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===== Blocs prédictions ===== */
+.bloc1, .bloc2 {
     display: flex;
-    width: 100%;
+    width: 95%;            /* légèrement plus large que 90% */
+    max-width: 1400px;     /* augmente la largeur maximale */
+    margin: 40px auto;
+    gap: 20px;
+    padding: 30px;         /* plus de padding = plus de hauteur */
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 400px;     /* augmente la hauteur minimale */
+    align-items: stretch;
+}
+
+
+.bloc1 {
     background-color: white;
     color: black;
-    text-align: center;
-    margin: 40px 0;
-    align-items: stretch; /* force la même hauteur pour gauche et droite */
-    gap: 20px;            /* espace horizontal */
-    padding: 20px;
+}
+
+.bloc2 {
+    background-color: black;
+    color: white;
 }
 
 .gauche, .droite {
-    flex: 1;               /* chaque côté prend la moitié */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* centre verticalement */
+    align-items: center;     /* centre horizontalement */
+    text-align: center;      /* centre le texte */
 }
 
-.gauche img {
+
+.gauche img, .droite img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -170,39 +162,35 @@ header {
 }
 
 /* Texte */
-.droite h2 {
+.droite h2, .gauche h2 {
     margin-top: 0;
 }
 
-.droite p {
+.droite p, .gauche p {
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-/* Responsive mobile */
-@media (max-width: 768px) {
-    #bloc1 {
-        flex-direction: column; /* image au-dessus du texte */
-        text-align: center;
-    }
-    .gauche, .droite {
-        width: 100%;
-        height: auto;
-    }
+/* Boutons prédictions */
+#voir a {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
 }
 
+/* ===== Footer ===== */
 footer {
-    background-color: black;  
-    color: white;             
-    text-align: center;    
+    background-color: black;
+    color: white;
+    text-align: center;
     padding: 30px 20px;
-    margin-top: 0;
 }
 
 #footer-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;              
+    gap: 10px;
     align-items: center;
 }
 
@@ -214,155 +202,51 @@ footer {
 }
 
 #footer-links a:hover {
-    color: #df5b04;        
+    color: #df5b04;
 }
 
-/* bloc1 responsive */
+/* ===== Responsive ===== */
 @media (max-width: 1024px) {
-  #bloc1 {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: auto; /* laisse le container s’adapter au contenu */
-  }
-
-  .gauche, .droite {
-    width: 90%; /* prend presque tout l’écran */
-    margin: 20px auto; /* centrage horizontal */
-  }
-
-  .droite p {
-    margin-bottom: 30px;
-    font-size: 1rem; /* texte plus petit pour petits écrans */
-  }
-}
-
-/* Box-sizing global */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-/* Responsive mobile */
-@media (max-width: 480px) {
-    /* Containers */
-    #bloc1, #bloc2, #bloc3 {
-        width: 100%;
-        padding: 0 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .droite p {
-        font-size: 0.85rem;
-        text-align: center;
-    }
-  }
-
-h1 {
-    text-align: center; 
-    margin: 0; 
-    margin-top: 20px;    
-}
-
-/* Bloc 2 : texte à gauche, image à droite */
-#bloc2 {
-    display: flex;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin: 40px 0;
-    align-items: stretch;
-    gap: 20px;
-    padding: 20px;
-}
-
-#bloc2 .gauche {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#bloc2 .droite {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#bloc2 .droite img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Texte */
-#bloc2 .gauche h2 {
-    margin-top: 0;
-}
-
-#bloc2 .gauche p {
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Responsive mobile */
-@media (max-width: 768px) {
-    #bloc2 {
-        flex-direction: column; /* image en dessous du texte */
-        text-align: center;
-    }
-    #bloc2 .gauche, #bloc2 .droite {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* Responsive tablette/PC */
-@media (max-width: 1024px) {
-    #bloc2 {
+    .bloc1, .bloc2 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
-        height: auto;
+        min-height: auto;
     }
 
-    #bloc2 .gauche, #bloc2 .droite {
+    .gauche, .droite {
         width: 90%;
         margin: 20px auto;
     }
 
-    #bloc2 .gauche p {
-        margin-bottom: 30px;
+    .droite p {
         font-size: 1rem;
     }
 }
 
-/* Responsive mobile petit écran */
-@media (max-width: 480px) {
-    #bloc2 {
-        width: 100%;
-        padding: 0 10px;
+@media (max-width: 768px) {
+    #bloc1, #bloc2 {
         flex-direction: column;
-        align-items: center;
-    }
-
-    #bloc2 .gauche p {
-        font-size: 0.85rem;
         text-align: center;
     }
+
+    .droite p, .gauche p {
+        font-size: 0.95rem;
+    }
 }
+
+@media (max-width: 480px) {
+    .droite p, .gauche p {
+        font-size: 0.85rem;
+    }
+}
+
+#amen,
+#giannis,
+#celtics,
+#wemby,
+#nbacup {
+    scroll-margin-top: 100px; /* hauteur approximative du header */
+}
+
 

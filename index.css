@@ -117,23 +117,24 @@ header {
 
 #bienvenue {
     grid-area: bienvenue;
-    font-size: larger;
 }
 
 #bienvenue a {
-  text-decoration: none;  /* pas de soulignement */
-  color: white;           /* toujours blanc */
-  font-size: larger;      /* même taille tout le temps */
+    text-decoration: none;  /* pas de soulignement */
+    color: white;           /* toujours blanc */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* taille responsive */
+    cursor: pointer;        /* curseur main */
 }
 
-#bienvenue a:visited,
+/* Supprime tout autre effet hover ou focus */
 #bienvenue a:hover,
+#bienvenue a:focus,
 #bienvenue a:active,
-#bienvenue a:focus {
-  color: white;           /* reste blanc dans tous les états */
-  text-decoration: none;  /* jamais souligné */
-  font-size: larger;      /* même taille partout */
-  outline: none;          /* supprime contour du focus */
+#bienvenue a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: inherit;     /* reprend la taille responsive définie */
+    outline: none;
 }
 
 #connexion {
@@ -380,19 +381,44 @@ header {
     margin-right: 50px;
 }
 
-.droite > div {
-    width: 90%;
-    max-width: 400px;
-    min-height: 50px;
+.droite > a {
+    height: 200px; /* fixe la hauteur pour toutes les prédictions */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;       
-    font-weight: bold;
     text-align: center;
-    padding: 10px;
     border-radius: 20px;
     background-color: #df5b04;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.droite > a:hover {
+    transform: scale(1.05);
+    background-color: #ff7f32; /* ou une autre couleur de survol */
+    cursor: pointer;
+}
+
+.droite > a.pred {
+    width: 500px;          /* largeur fixe pour toutes */
+    height: 70px;         /* hauteur fixe pour toutes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #df5b04;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #pred1 {
@@ -687,4 +713,28 @@ body {
     padding-bottom: 20px; /* espace supplémentaire si besoin */
   }
 }
+
+.team-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #df5b04; /* couleur exemple, à personnaliser */
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.team-box:hover {
+    transform: scale(1.05);
+    background-color: #ff7f32; /* couleur au survol */
+}
+
+
+
 

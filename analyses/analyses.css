@@ -120,23 +120,24 @@ header {
 
 #bienvenue {
     grid-area: bienvenue;
-    font-size: larger;
 }
 
 #bienvenue a {
-  text-decoration: none;  /* pas de soulignement */
-  color: white;           /* toujours blanc */
-  font-size: larger;      /* même taille tout le temps */
+    text-decoration: none;  /* pas de soulignement */
+    color: white;           /* toujours blanc */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* taille responsive */
+    cursor: pointer;        /* curseur main */
 }
 
-#bienvenue a:visited,
+/* Supprime tout autre effet hover ou focus */
 #bienvenue a:hover,
+#bienvenue a:focus,
 #bienvenue a:active,
-#bienvenue a:focus {
-  color: white;           /* reste blanc dans tous les états */
-  text-decoration: none;  /* jamais souligné */
-  font-size: larger;      /* même taille partout */
-  outline: none;          /* supprime contour du focus */
+#bienvenue a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: inherit;     /* reprend la taille responsive définie */
+    outline: none;
 }
 
 #connexion {
